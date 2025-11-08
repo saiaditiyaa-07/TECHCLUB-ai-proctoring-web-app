@@ -1,0 +1,32 @@
+{
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "SUPABASE_URL": "@supabase_url",
+    "SUPABASE_ANON_KEY": "@supabase_anon_key",
+    "JWT_SECRET": "@jwt_secret",
+    "SESSION_SECRET": "@session_secret",
+    "OPENAI_API_KEY": "@openai_api_key",
+    "GOOGLE_CLOUD_VISION_API_KEY": "@google_vision_key",
+    "AZURE_COMPUTER_VISION_KEY": "@azure_vision_key",
+    "RF_DETECTOR_API_URL": "@rf_detector_url",
+    "RF_DETECTOR_API_KEY": "@rf_detector_key",
+    "SMTP_HOST": "@smtp_host",
+    "SMTP_PORT": "@smtp_port",
+    "SMTP_USER": "@smtp_user",
+    "SMTP_PASSWORD": "@smtp_password",
+    "NEXT_PUBLIC_API_URL": "@next_public_api_url",
+    "ENABLE_RF_MONITORING": "@enable_rf_monitoring",
+    "ENABLE_AI_MONITORING": "@enable_ai_monitoring",
+    "MAX_VIOLATIONS_ALLOWED": "@max_violations",
+    "TEST_TIMEOUT_MINUTES": "@test_timeout"
+  },
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/**": {
+      "maxDuration": 60
+    }
+  }
+}
